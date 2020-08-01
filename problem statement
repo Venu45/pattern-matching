@@ -1,0 +1,32 @@
+In Bioinformatics, DNA sequencing is an important application used to study and understand the order of nucleotides. DNA Sequences are made of of nucleotides namely Adenine, Guanine, Cytosine and Thymine represented by the four letters {A, C, G, T}. Extensive genetic studies done in the past have identified well defined disease related patterns. Looking for such patterns in the DNA sequence helps in detecting the existence of the disease and the number of occurrences of the pattern defines the intensity of the disease. Your goal is to find and locate all the occurences of the given patterns in the given DNA sequence.
+
+Approach to be used:
+
+Preprocess the gene sequence and store all the indices of the 4 letters {A, C, G, T}. Search for the patterns using the index informaton.
+
+Input Format
+
+The first line contains a single string 'S' representing the DNA Sequence and is a combination of the characters {A, C, G, T}. The second line is an integer 'n' denoting the number of patterns to be searched for. Each of the subsequent n lines represent a pattern '', 0 ≤ i < n.
+
+Constraints
+
+1 ≤ S ≤ 10000
+
+1 ≤ n ≤ 10
+
+1 ≤ P ≤ 10000
+
+Output Format
+
+n lines, where the first integer 't' in each line denotes the total number of occurences of the pattern in the given sequence followed by t integers representing the starting index at which the pattern occurs separated by space.
+
+Sample Input 0
+
+ACGCATGCTGCTACG
+2
+TGCT
+AC
+Sample Output 0
+
+2 5 8
+2 0 12
