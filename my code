@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    char s[10000];
+    int n;
+    scanf("%s",s);
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+    char p[10000];
+        scanf("%s",p);
+         int sl=strlen(s);
+        int l=strlen(p);
+        int count=0;
+        int a[10000];
+        for(int k=0;k<sl;k++)
+        {
+            int m=k;int j;
+             for(j=0;j<l&&m<sl;j++)
+                {
+                if(s[m]==p[j])m++;else {break;}
+                 }
+            if(j==l){a[count]=k;count++;}
+            
+        }
+        printf("%d ",count);
+        for(int x=0;x<count;x++){
+            printf("%d ",a[x]);
+                            }
+         printf("\n");     
+    }
+}
